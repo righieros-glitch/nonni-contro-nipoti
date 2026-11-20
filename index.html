@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nonni contro Nipoti — il kit per il dopo-pranzo di Natale all'italiana</title>
+<meta name="description" content="Nonni contro Nipoti è la sfida da stampare che tiene tutta la famiglia a tavola. Lo stampi in 10 minuti. Non prepari niente.">
+<meta name="theme-color" content="#a31f2b">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Nonni contro Nipoti — il kit per il dopo-pranzo di Natale">
+<meta property="og:description" content="Alle 16:00 di Natale tutti sul divano? Quest'anno la tua tavola ride per due ore.">
+<meta property="og:image" content="/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23fbf6ec' stroke='%23a31f2b' stroke-width='5'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-weight='700' font-size='30' text-anchor='middle' fill='%23a31f2b'%3E25%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/img/copertina.webp">
+<style>
+:root{
+  --red:#a31f2b; --red-dark:#86171f; --green:#1f5a3b; --green-dark:#164430;
+  --gold:#b68a2c; --cream:#fbf6ec; --cream-2:#f5ecda; --paper:#ffffff;
+  --ink:#2a2622; --muted:#6b625a; --line:#e6dccb;
+  --serif:"Lora",Georgia,"Times New Roman",serif;
+  --sans:"Fira Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --radius:14px; --shadow:0 10px 30px rgba(60,35,20,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.55}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--red)}
+h1,h2,h3{font-family:var(--serif);line-height:1.18;margin:0 0 .6em;color:var(--red)}
+h1{font-size:clamp(2rem,7.4vw,3.3rem);font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(1.65rem,5.6vw,2.4rem);font-weight:700}
+h3{font-size:1.2rem;font-weight:600;color:var(--green)}
+p{margin:0 0 .9em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.narrow{max-width:680px;margin:0 auto}
+section{padding:64px 0}
+.center{text-align:center}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:14px 28px;border-radius:999px;
+  background:var(--red);color:#fff;font-family:var(--sans);font-weight:700;font-size:1.1rem;text-decoration:none;
+  box-shadow:0 6px 0 var(--red-dark),0 12px 24px rgba(163,31,43,.25);transition:transform .12s,box-shadow .12s;text-align:center}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 var(--red-dark),0 6px 14px rgba(163,31,43,.2)}
+.btn-block{width:100%}
+.btn-lg{font-size:1.25rem;min-height:64px}
+.btn-secondary{background:transparent;color:var(--green);border:2px solid var(--green);box-shadow:none;font-weight:600}
+.btn-secondary:hover{background:var(--green);color:#fff}
+.cta-wrap{margin-top:28px;text-align:center}
+.microcopy{font-size:.86rem;color:var(--muted);margin-top:14px;text-align:center}
+
+/* Top bar */
+.topbar{background:var(--paper);border-bottom:3px solid var(--red)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-family:var(--serif);font-weight:700;font-size:1.15rem;color:var(--red);text-decoration:none}
+.logo i{color:var(--gold);font-weight:500}
+.logo b{color:var(--green)}
+.topbar .mini{font-size:.9rem;font-weight:600;color:var(--green);text-decoration:none}
+
+/* Hero */
+.hero{padding:40px 0 56px;background:
+  radial-gradient(ellipse at 50% 0%,#fff 0%,rgba(255,255,255,0) 60%),var(--cream)}
+.hero-grid{display:grid;gap:34px;align-items:center}
+.eyebrow{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--green);margin-bottom:14px}
+.hero .sub{font-size:1.15rem;color:var(--ink)}
+.hero-img{position:relative;max-width:min(330px,82vw);margin:0 auto;transform:rotate(-2deg)}
+.hero-img img{border-radius:6px;box-shadow:0 24px 50px rgba(60,35,20,.25),0 2px 6px rgba(0,0,0,.08)}
+.balls{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 20px}
+.ball{width:34px;height:34px;border-radius:50%;border:2px solid var(--red);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:.85rem;color:var(--red);background:#fff}
+.ball.g{border-color:var(--green);color:var(--green)}
+
+/* Problem */
+.problem{background:var(--paper)}
+.problem .story p{font-size:1.15rem}
+.problem .story .hit{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--red)}
+.problem .story .turn{border-left:4px solid var(--green);padding-left:16px;margin-top:28px}
+.problem .story .turn p:last-child{font-weight:700;color:var(--green)}
+
+/* Kit */
+.cards{display:grid;gap:16px;margin-top:28px}
+.card{background:var(--paper);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);border-top:5px solid var(--green);display:grid;gap:14px}
+.card:nth-child(odd){border-top-color:var(--red)}
+.card .num{width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-weight:700}
+.card:nth-child(even) .num{background:var(--green)}
+.card h3{margin:0}
+.card p{margin:0;font-size:1rem}
+.card .thumb{border-radius:8px;border:1px solid var(--line);height:170px;object-fit:cover;object-position:top;width:100%;cursor:zoom-in}
+.card .head{display:flex;gap:12px;align-items:center}
+
+/* Steps */
+.how{background:var(--cream-2)}
+.steps{display:grid;gap:18px;margin:30px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{background:var(--paper);border-radius:var(--radius);padding:22px 22px 22px 80px;position:relative;box-shadow:var(--shadow)}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:20px;top:20px;width:44px;height:44px;border-radius:50%;
+  border:2px solid var(--red);color:var(--red);font-family:var(--serif);font-weight:700;font-size:1.3rem;display:grid;place-items:center;background:var(--cream)}
+.steps li:nth-child(2)::before{border-color:var(--green);color:var(--green)}
+.steps strong{display:block;font-family:var(--serif);font-size:1.15rem;color:var(--ink);margin-bottom:4px}
+.steps p{margin:0;font-size:1rem}
+
+/* Why */
+.why-list{display:grid;gap:18px;margin-top:28px}
+.why{background:var(--paper);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border-left:5px solid var(--gold)}
+.why h3{color:var(--red);font-size:1.25rem}
+.why p{margin:0;font-size:1rem}
+
+/* Price */
+.price-sec{background:var(--paper)}
+.price-lines p{font-size:1.1rem}
+.price-big{font-family:var(--serif);font-size:1.5rem;color:var(--green);font-weight:700}
+.launch-box{margin:28px auto 0;max-width:520px;background:var(--cream);border:2px dashed var(--red);border-radius:var(--radius);padding:22px;text-align:center;
+  font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--red)}
+
+/* Gallery */
+.gallery{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 18px 22px;margin:26px -18px 0;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.gallery figure{flex:0 0 78%;max-width:340px;scroll-snap-align:center;margin:0}
+.gallery button{all:unset;cursor:zoom-in;display:block;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);background:#fff}
+.gallery button:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.gallery figcaption{font-size:.88rem;color:var(--muted);text-align:center;margin-top:10px}
+.gal-hint{font-size:.85rem;color:var(--muted);text-align:center}
+.sample{margin-top:34px;background:var(--paper);border-radius:var(--radius);padding:26px 22px;box-shadow:var(--shadow);border:2px solid var(--green)}
+.sample .lead{font-size:1.1rem}
+.sample ul{list-style:none;padding:0;margin:20px 0 24px;display:grid;gap:10px}
+.sample li{display:flex;gap:12px;align-items:center;background:var(--cream);border-radius:10px;padding:10px 12px;font-size:1rem}
+.sample li .ball{flex:0 0 38px;width:38px;height:38px}
+.sample .more{font-size:.92rem;color:var(--muted);text-align:center;margin:16px 0 0}
+.sample .more a{font-weight:700}
+
+/* Guarantee */
+.guarantee{background:var(--green);color:#fff}
+.guarantee .badge{width:132px;height:132px;margin:0 auto 22px;border-radius:50%;border:3px solid var(--gold);display:grid;place-items:center;background:var(--green-dark);
+  box-shadow:0 0 0 7px var(--green),0 0 0 9px rgba(182,138,44,.6)}
+.guarantee .badge span{font-family:var(--serif);font-weight:700;font-size:.95rem;line-height:1.15;text-align:center;color:#fff;padding:0 10px}
+.guarantee h2{color:#fff}
+.guarantee p{font-size:1.15rem}
+.guarantee .sign{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:#f2dca6;margin-top:18px}
+
+/* FAQ */
+.faq details{background:var(--paper);border-radius:12px;margin-bottom:12px;box-shadow:0 4px 14px rgba(60,35,20,.07);border:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 54px 18px 20px;font-weight:600;position:relative;font-size:1.05rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--red);font-weight:400;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details[open] summary{color:var(--red)}
+.faq .ans{padding:0 20px 18px;font-size:1rem}
+.faq .ans p{margin:0}
+
+/* Final */
+.final{background:var(--paper);border-top:6px double var(--red)}
+.final .launch p{font-size:1.15rem}
+.final .launch .strike{text-decoration:line-through;color:var(--muted)}
+.countdown{display:flex;justify-content:center;gap:10px;margin:24px 0 8px}
+.countdown div{background:var(--red);color:#fff;border-radius:12px;min-width:68px;padding:12px 6px 8px;text-align:center}
+.countdown div:nth-child(even){background:var(--green)}
+.countdown b{display:block;font-family:var(--serif);font-size:1.8rem;line-height:1;font-variant-numeric:tabular-nums}
+.countdown small{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;opacity:.9}
+.closing{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--green);margin-top:24px}
+.ps{margin-top:40px;background:var(--cream);border-radius:var(--radius);padding:20px 22px;font-size:1rem}
+.ps b{color:var(--red);font-family:var(--serif)}
+
+/* Footer */
+footer{background:#221d19;color:#d9cfc2;padding:44px 0 110px;font-size:.92rem}
+footer a{color:#fff}
+.social{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:26px}
+.social a{display:inline-flex;align-items:center;gap:8px;border:1px solid #5a4f45;border-radius:999px;padding:10px 18px;text-decoration:none;font-weight:600}
+.social svg{width:18px;height:18px;fill:currentColor}
+.todo{background:#fff3b0;color:#4a3b00;border:2px dashed #d39e00;border-radius:10px;padding:14px 16px;margin:12px auto;max-width:680px}
+.todo strong{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;color:#8a5a00}
+.legal-links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0}
+.legal-links a{background:#fff3b0;color:#4a3b00;border:2px dashed #d39e00;border-radius:8px;padding:6px 10px;text-decoration:none;font-size:.86rem;font-weight:600}
+.copy{text-align:center;color:#9d9186;margin-top:20px}
+
+/* Sticky mobile CTA */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-top:1px solid var(--line);
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .25s}
+.sticky.show{transform:none}
+.sticky .btn{width:100%;min-height:52px;font-size:1.05rem;box-shadow:0 4px 0 var(--red-dark)}
+
+/* Lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(94vw,820px);max-height:94vh}
+dialog.lb::backdrop{background:rgba(20,14,10,.85)}
+dialog.lb img{max-height:88vh;width:auto;margin:0 auto;border-radius:6px}
+dialog.lb button{position:fixed;top:12px;right:12px;width:46px;height:46px;border-radius:50%;border:0;background:#fff;font-size:1.6rem;cursor:pointer;color:var(--red)}
+
+.is-hidden{display:none !important}
+
+@media (min-width:760px){
+  section{padding:90px 0}
+  .hero{padding:64px 0 84px}
+  .hero-grid{grid-template-columns:1.15fr .85fr}
+  .hero-img{max-width:400px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .why-list{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .gallery figure{flex-basis:300px}
+  .btn-auto-md{width:auto}
+  .sticky{display:none}
+  footer{padding-bottom:44px}
+}
+@media (min-width:1000px){ .cards{grid-template-columns:repeat(3,1fr)} }
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto !important;transition:none !important}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Nonni contro Nipoti">Nonni <i>contro</i> <b>Nipoti</b></a>
+    <a class="mini" href="#kit">Cosa c'è nel kit</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. HERO -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Il kit per il dopo-pranzo di Natale all'italiana</div>
+      <h1>Alle 16:00 di Natale tutti sul divano? Quest'anno la tua tavola ride per due ore.</h1>
+      <div class="balls" aria-hidden="true"><span class="ball">7</span><span class="ball g">25</span><span class="ball">88</span><span class="ball g">90</span><span class="ball">44</span><span class="ball g">12</span></div>
+      <p class="sub">Nonni contro Nipoti è la sfida da stampare che tiene tutta la famiglia a tavola. Lo stampi in 10 minuti. Non prepari niente.</p>
+      <div class="cta-wrap" style="text-align:left">
+        <a class="btn btn-lg btn-block btn-auto-md js-cta" href="https://nonnicontronipoti.gumroad.com/l/cumoho">Voglio il kit a&nbsp;<span class="js-price">11,90€</span></a>
+        <p class="microcopy" style="text-align:left">PDF da stampare · Arriva via email in 1 minuto · Se non ridete, ti rimborso</p>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="/img/copertina.webp" width="909" height="1287" alt="Copertina del kit Nonni contro Nipoti: Natale 2026, con l'indice dei giochi" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<!-- 2. PROBLEMA -->
+<section class="problem">
+  <div class="wrap narrow story">
+    <h2>Lo conosci, quel momento.</h2>
+    <p>Il panettone è tagliato. Il caffè è finito.<br>
+    Il nonno si appisola. Lo zio accende la partita.<br>
+    I ragazzi sono già sul telefono.</p>
+    <p class="hit">Tu guardi la tavola e pensi: «Tutto qui?»</p>
+    <p>Hai cucinato per due giorni. Hai riunito tutti.<br>
+    E alle 16:00 la famiglia si spegne. Ognuno nel suo schermo.</p>
+    <div class="turn">
+      <p>La tombola ce l'hai già, e va benissimo.</p>
+      <p>Quello che ti manca è il pomeriggio: un motivo per restare a tavola insieme.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. COSA C'È NEL KIT -->
+<section id="kit">
+  <div class="wrap">
+    <h2 class="center">Tutto quello che serve per due ore di sfida. In 29 pagine.</h2>
+    <div class="cards">
+      <article class="card">
+        <img class="thumb js-zoom" src="/img/guida.webp" loading="lazy" width="909" height="1287" alt="Anteprima della Guida per la regista">
+        <div class="head"><span class="num">1</span><h3>La guida per la regista.</h3></div>
+        <p>Una pagina sola. Cosa stampare, come fare le squadre, in che ordine giocare. Tu leggi, gli altri giocano.</p>
+      </article>
+      <article class="card">
+        <div class="head"><span class="num">2</span><h3>Chi l'ha detto.</h3></div>
+        <p>Il gioco d'apertura. Ognuno scrive a tavola la frase tipica di un parente. Gli altri indovinano chi la dice. Risate garantite dal primo minuto.</p>
+      </article>
+      <article class="card">
+        <img class="thumb js-zoom" src="/img/smorfia.webp" loading="lazy" width="909" height="1287" alt="Anteprima della smorfia della famiglia italiana, numeri da 1 a 30">
+        <div class="head"><span class="num">3</span><h3>La Tombola con la smorfia comica.</h3></div>
+        <p>90 numeri, 90 parenti che conosci benissimo. La zia che chiede «E la fidanzata?». Il nonno che cerca gli occhiali (e ce li ha in testa). Con 24 cartelle da stampare.</p>
+      </article>
+      <article class="card">
+        <img class="thumb js-zoom" src="/img/carte-volta-oggi.webp" loading="lazy" width="909" height="1287" alt="Anteprima delle carte Una volta e Oggi">
+        <div class="head"><span class="num">4</span><h3>60 carte Nonni contro Nipoti.</h3></div>
+        <p>30 sulle cose di una volta, 30 su app e parole di oggi. Il gettone telefonico contro le spunte blu.</p>
+      </article>
+      <article class="card">
+        <div class="head"><span class="num">5</span><h3>Il Quiz di famiglia.</h3></div>
+        <p>30 domande da completare a voce con la vostra storia. «In che anno si sono sposati i nonni?» Decide chi c'era.</p>
+      </article>
+      <article class="card">
+        <div class="head"><span class="num">6</span><h3>Tabellone punteggi e attestato.</h3></div>
+        <p>Si contano i punti e si premia la squadra vincitrice: «Campioni del Natale 2026».</p>
+      </article>
+      <article class="card">
+        <div class="head"><span class="num">7</span><h3>Bonus Capodanno.</h3></div>
+        <p>Una pagina per rigiocare tutto la notte del 31.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. COME FUNZIONA -->
+<section class="how">
+  <div class="wrap">
+    <h2 class="center">Pronto in tre passi. Anche la mattina di Natale.</h2>
+    <ol class="steps">
+      <li><strong>Lo compri.</strong><p>Paghi in sicurezza con carta o PayPal.</p></li>
+      <li><strong>Lo ricevi in 1 minuto.</strong><p>Il PDF arriva subito nella tua email. Niente spedizioni, niente attese.</p></li>
+      <li><strong>Lo stampi in 10 minuti.</strong><p>Fogli A4, stampante di casa. Ritagliate le carte a tavola, mentre arriva il caffè.</p></li>
+    </ol>
+    <div class="cta-wrap">
+      <a class="btn btn-lg btn-block btn-auto-md js-cta" href="https://nonnicontronipoti.gumroad.com/l/cumoho">Voglio il kit a&nbsp;<span class="js-price">11,90€</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. PERCHÉ NON È LA SOLITA TOMBOLA -->
+<section>
+  <div class="wrap">
+    <h2 class="center">Gli altri giochi parlano di tutti. Questo parla della tua famiglia.</h2>
+    <div class="why-list">
+      <div class="why"><h3>Lo personalizzate a tavola.</h3><p>Nessun gioco in scatola conosce lo zio Franco. Questo sì, perché le frasi di «Chi l'ha detto» e le risposte del quiz le mettete voi, lì per lì. Ogni famiglia gioca una partita diversa.</p></div>
+      <div class="why"><h3>È italiano vero.</h3><p>Non è un gioco americano tradotto. C'è la suocera che aggiunge il sale. C'è la tovaglia buona. C'è la Vigilia di solo pesce. Vi riconoscerete in ogni carta.</p></div>
+      <div class="why"><h3>Le generazioni sono alla pari.</h3><p>Metà delle domande premia chi ha usato il gettone. L'altra metà premia chi sa cosa vuol dire «cringe». Il nonno spiega il telegramma. Il nipote spiega cos'è un reel. Vince chi ride di più.</p></div>
+      <div class="why"><h3>Zero preparazione.</h3><p>Non devi inventare domande né imparare regole. Ogni gioco si spiega in mezza pagina, scritta grande, da leggere ad alta voce. La nonna può fare la regista.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. IL PREZZO -->
+<section class="price-sec">
+  <div class="wrap narrow">
+    <h2 class="center">Quanto costa far ridere 12 persone per due ore?</h2>
+    <div class="price-lines">
+      <p>Un gioco da tavolo nuovo costa 30-40€. E di solito le regole le capisce uno solo.</p>
+      <p>Un buon panettone artigianale costa di più. E finisce in un pomeriggio.</p>
+      <p class="price-big">Nonni contro Nipoti costa 14,90€.</p>
+      <p>A una tavola di 12 persone sono circa 1,25€ a testa. Più o meno un caffè al bar.</p>
+      <p>E non finisce a Natale. Lo usi a Santo Stefano, a Capodanno, all'Epifania.<br>
+      È un PDF: lo ristampi tutte le volte che vuoi.</p>
+    </div>
+    <div class="launch-box js-launch">Fino all'8 dicembre lo paghi 11,90€. Meno di 1€ a testa.</div>
+    <div class="cta-wrap">
+      <a class="btn btn-lg btn-block btn-auto-md js-cta" href="https://nonnicontronipoti.gumroad.com/l/cumoho">Voglio il kit a&nbsp;<span class="js-price">11,90€</span></a>
+    </div>
+    <!-- Qui, dopo il lancio: 2-3 recensioni reali di chi l'ha usato -->
+  </div>
+</section>
+
+<!-- 7. ANTEPRIMA E CAMPIONE GRATIS -->
+<section id="anteprima">
+  <div class="wrap">
+    <h2 class="center">Guarda dentro prima di comprare.</h2>
+    <div class="gallery" role="list">
+      <figure role="listitem"><button type="button" class="js-zoom-btn" aria-label="Ingrandisci: copertina"><img src="/img/copertina.webp" loading="lazy" width="909" height="1287" alt="Copertina del kit"></button><figcaption>Copertina</figcaption></figure>
+      <figure role="listitem"><button type="button" class="js-zoom-btn" aria-label="Ingrandisci: guida per la regista"><img src="/img/guida.webp" loading="lazy" width="909" height="1287" alt="Guida per la regista"></button><figcaption>Guida per la regista</figcaption></figure>
+      <figure role="listitem"><button type="button" class="js-zoom-btn" aria-label="Ingrandisci: pagina della smorfia"><img src="/img/smorfia.webp" loading="lazy" width="909" height="1287" alt="Una pagina della smorfia della famiglia italiana"></button><figcaption>Una pagina della smorfia</figcaption></figure>
+      <figure role="listitem"><button type="button" class="js-zoom-btn" aria-label="Ingrandisci: regole e carte Nonni contro Nipoti"><img src="/img/carte-regole.webp" loading="lazy" width="909" height="1287" alt="Regole e carte del gioco Nonni contro Nipoti"></button><figcaption>Le regole e le carte «Una volta»</figcaption></figure>
+      <figure role="listitem"><button type="button" class="js-zoom-btn" aria-label="Ingrandisci: carte Una volta e Oggi"><img src="/img/carte-volta-oggi.webp" loading="lazy" width="909" height="1287" alt="Carte verdi Una volta e carte rosse Oggi"></button><figcaption>Le carte «Una volta» e «Oggi»</figcaption></figure>
+    </div>
+    <p class="gal-hint">Scorri e tocca per ingrandire →</p>
+
+    <div class="sample narrow">
+      <h3>Le prime 30 smorfie e le regole, gratis.</h3>
+      <p class="lead">Giocale con la tombola che hai già. Se ridete già adesso, immagina il 25.</p>
+      <ul>
+        <li><span class="ball">6</span>La zia che chiede «E la fidanzata?»</li>
+        <li><span class="ball g">7</span>Il contenitore di plastica che non torna mai indietro</li>
+        <li><span class="ball">25</span>Natale: tutti a tavola all'una, si mangia alle tre</li>
+      </ul>
+      <a class="btn btn-secondary btn-block" href="https://nonnicontronipoti.gumroad.com/l/gmuhs">Scarica le 30 smorfie gratis</a>
+      <p class="more">Le altre 60, le cartelle e gli altri tre giochi sono nel kit. <a class="js-cta" href="https://nonnicontronipoti.gumroad.com/l/cumoho">→ Prendi il kit a&nbsp;<span class="js-price">11,90€</span></a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 8. GARANZIA -->
+<section class="guarantee">
+  <div class="wrap narrow center">
+    <div class="badge" aria-hidden="true"><span>Risate garantite<br>o rimborso</span></div>
+    <h2>Se a tavola non ridete, ti rimborso.</h2>
+    <p>Provalo a Natale, con la tua famiglia vera.<br>
+    Se nessuno ride, scrivimi entro il 6 gennaio 2027.<br>
+    Ti restituisco tutti i soldi. Senza domande, senza moduli.</p>
+    <p class="sign">Il rischio è mio. Le risate sono vostre.</p>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="faq">
+  <div class="wrap narrow">
+    <h2 class="center">Domande frequenti</h2>
+    <details><summary>Ho una stampante in bianco e nero. Va bene?</summary><div class="ans"><p>Sì. Il kit è pensato per essere chiaro anche in bianco e nero. Le carte «Una volta» e «Oggi» si distinguono anche dalla scritta in alto. Se hai del cartoncino, usalo per carte e cartelle: durano di più.</p></div></details>
+    <details><summary>Per quante persone è?</summary><div class="ans"><p>Da 4 a circa 20. Ci sono 24 cartelle per la tombola e 20 cartoncini per «Chi l'ha detto». Se siete di più, ristampi le pagine che servono.</p></div></details>
+    <details><summary>Da che età si gioca?</summary><div class="ans"><p>Da quando si sa leggere fino ai bisnonni. I più piccoli giocano in squadra con un grande. Alla tombola possono giocare anche da soli.</p></div></details>
+    <details><summary>Come lo ricevo?</summary><div class="ans"><p>Subito dopo il pagamento ti arriva un'email con il link per scaricare il PDF. Ci vuole circa un minuto. Lo puoi scaricare anche dal telefono e stampare dopo.</p></div></details>
+    <details><summary>Va bene anche per Capodanno?</summary><div class="ans"><p>Sì. Nel kit c'è una pagina bonus con le regole adattate per la notte del 31, anche tra amici. E la tombola finisce prima della mezzanotte.</p></div></details>
+    <details><summary>Ho già la tombola in casa. Mi serve lo stesso?</summary><div class="ans"><p>Sì, e la puoi usare. Tieni i tuoi numeri e le tue cartelle: dal kit ti serve solo la smorfia comica. E in più hai Chi l'ha detto, le 60 carte e il quiz.</p></div></details>
+    <details><summary>Devo preparare qualcosa prima?</summary><div class="ans"><p>No. Stampi e basta: le carte si ritagliano a tavola, tutti insieme, mentre arriva il caffè. Le domande personali le completate a tavola, a voce.</p></div></details>
+    <details><summary>Posso stamparlo più volte?</summary><div class="ans"><p>Sì, per la tua famiglia tutte le volte che vuoi. Anche il prossimo Natale.</p></div></details>
+  </div>
+</section>
+
+<!-- 10. PREZZO DI LANCIO E CHIUSURA -->
+<section class="final" id="acquista">
+  <div class="wrap narrow center">
+    <h2>Il 25 dicembre arriva in fretta.</h2>
+    <div class="launch js-launch">
+      <p><strong>Prezzo di lancio: 11,90€</strong> invece di <span class="strike">14,90€</span>.</p>
+      <p>Vale fino all'8 dicembre. Dal 9 dicembre il kit costa 14,90€.</p>
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div><b data-u="d">--</b><small>giorni</small></div>
+        <div><b data-u="h">--</b><small>ore</small></div>
+        <div><b data-u="m">--</b><small>minuti</small></div>
+        <div><b data-u="s">--</b><small>secondi</small></div>
+      </div>
+    </div>
+    <p class="closing">Compralo oggi. Stampalo quando vuoi. A Natale fai la regista.</p>
+    <div class="cta-wrap">
+      <a class="btn btn-lg btn-block btn-auto-md js-cta" href="https://nonnicontronipoti.gumroad.com/l/cumoho">Prendi il kit a&nbsp;<span class="js-price">11,90€</span></a>
+      <p class="microcopy">PDF da stampare · Arriva via email in 1 minuto · Se non ridete, ti rimborso</p>
+    </div>
+    <div class="ps" style="text-align:left">
+      <p style="margin:0"><b>P.S.</b> La tombola ce l'hai già? Usala. Noi cambiamo la smorfia. E ti diamo altri tre giochi per tenere tutti a tavola fino a sera.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap center">
+    <div class="social">
+      <a href="https://www.instagram.com/nonnicontronipoti/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.6a5.2 5.2 0 1 0 0 10.4 5.2 5.2 0 0 0 0-10.4zm0 8.6a3.4 3.4 0 1 1 0-6.8 3.4 3.4 0 0 1 0 6.8zm5.4-9.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg>
+        Instagram @nonnicontronipoti</a>
+      <a href="https://www.tiktok.com/@nonnicontronipoti" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a7.6 7.6 0 0 0 4.4 1.4V6.7a4.4 4.4 0 0 1-4.4-4.4z"/></svg>
+        TikTok @nonnicontronipoti</a>
+    </div>
+
+    <!-- SEGNAPOSTO: completare prima della pubblicazione definitiva -->
+    <div class="todo">
+      <strong>Da completare · Dati del venditore</strong>
+      [Nome e cognome / ragione sociale] · P.IVA [00000000000] · [indirizzo sede] · Contatto: [email@esempio.it]
+    </div>
+    <nav class="legal-links" aria-label="Note legali">
+      <a href="#" data-todo="privacy">Privacy policy (da completare)</a>
+      <a href="#" data-todo="cookie">Cookie policy (da completare)</a>
+      <a href="#" data-todo="termini">Termini e rimborsi (da completare)</a>
+    </nav>
+    <p class="copy">© 2026 Nonni contro Nipoti · Natale 2026</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky" aria-hidden="true">
+  <a class="btn js-cta" href="https://nonnicontronipoti.gumroad.com/l/cumoho" tabindex="-1">Voglio il kit a&nbsp;<span class="js-price">11,90€</span></a>
+</div>
+
+<dialog class="lb" id="lb" aria-label="Anteprima ingrandita">
+  <button type="button" id="lb-close" aria-label="Chiudi">×</button>
+  <img id="lb-img" alt="">
+</dialog>
+
+<script>
+(function(){
+  // Fine prezzo di lancio: 8 dicembre 2026, 23:59:59 ora italiana (CET = UTC+1)
+  var DEADLINE = Date.UTC(2026, 11, 8, 22, 59, 59);
+  var FULL = '14,90€';
+
+  function expire(){
+    document.querySelectorAll('.js-launch').forEach(function(el){ el.classList.add('is-hidden'); });
+    document.querySelectorAll('.js-price').forEach(function(el){ el.textContent = FULL; });
+  }
+
+  var units = {};
+  document.querySelectorAll('#countdown [data-u]').forEach(function(el){ units[el.getAttribute('data-u')] = el; });
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  var timer;
+  function tick(){
+    var diff = DEADLINE - Date.now();
+    if (diff <= 0){ expire(); if (timer) clearInterval(timer); return; }
+    var s = Math.floor(diff / 1000);
+    units.d.textContent = Math.floor(s / 86400);
+    units.h.textContent = pad(Math.floor(s % 86400 / 3600));
+    units.m.textContent = pad(Math.floor(s % 3600 / 60));
+    units.s.textContent = pad(s % 60);
+  }
+  tick();
+  if (Date.now() < DEADLINE) timer = setInterval(tick, 1000);
+
+  // CTA fissa su mobile dopo l'hero
+  var sticky = document.getElementById('sticky');
+  var hero = document.getElementById('hero');
+  var final = document.getElementById('acquista');
+  if ('IntersectionObserver' in window){
+    var heroGone = false, finalVisible = false;
+    var upd = function(){ var show = heroGone && !finalVisible; sticky.classList.toggle('show', show); sticky.setAttribute('aria-hidden', show ? 'false' : 'true'); sticky.querySelector('a').tabIndex = show ? 0 : -1; };
+    new IntersectionObserver(function(e){ heroGone = !e[0].isIntersecting; upd(); }).observe(hero);
+    new IntersectionObserver(function(e){ finalVisible = e[0].isIntersecting; upd(); }).observe(final);
+  }
+
+  // Lightbox anteprime
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lb-img');
+  function open(src, alt){
+    lbImg.src = src; lbImg.alt = alt || '';
+    if (lb.showModal) lb.showModal(); else window.open(src, '_blank');
+  }
+  document.querySelectorAll('.js-zoom-btn').forEach(function(b){
+    b.addEventListener('click', function(){ var i = b.querySelector('img'); open(i.src, i.alt); });
+  });
+  document.querySelectorAll('.js-zoom').forEach(function(i){
+    i.addEventListener('click', function(){ open(i.src, i.alt); });
+  });
+  document.getElementById('lb-close').addEventListener('click', function(){ lb.close(); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) lb.close(); });
+
+  // Link legali ancora da completare
+  document.querySelectorAll('[data-todo]').forEach(function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); });
+  });
+})();
+</script>
+</body>
+</html>
