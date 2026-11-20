@@ -349,6 +349,7 @@ dialog.lb button{position:fixed;top:12px;right:12px;width:46px;height:46px;borde
       <figure role="listitem"><button type="button" class="js-zoom-btn" aria-label="Ingrandisci: copertina"><img src="/img/copertina.webp" loading="lazy" width="909" height="1287" alt="Copertina del kit"></button><figcaption>Copertina</figcaption></figure>
       <figure role="listitem"><button type="button" class="js-zoom-btn" aria-label="Ingrandisci: guida per la regista"><img src="/img/guida.webp" loading="lazy" width="909" height="1287" alt="Guida per la regista"></button><figcaption>Guida per la regista</figcaption></figure>
       <figure role="listitem"><button type="button" class="js-zoom-btn" aria-label="Ingrandisci: pagina della smorfia"><img src="/img/smorfia.webp" loading="lazy" width="909" height="1287" alt="Una pagina della smorfia della famiglia italiana"></button><figcaption>Una pagina della smorfia</figcaption></figure>
+      <figure role="listitem"><button type="button" class="js-zoom-btn" aria-label="Ingrandisci: cartella della tombola"><img src="/img/cartelle.webp" loading="lazy" width="909" height="1287" alt="Anteprima di una cartella della tombola di Natale"></button><figcaption>Una delle 24 cartelle della tombola</figcaption></figure>
       <figure role="listitem"><button type="button" class="js-zoom-btn" aria-label="Ingrandisci: regole e carte Nonni contro Nipoti"><img src="/img/carte-regole.webp" loading="lazy" width="909" height="1287" alt="Regole e carte del gioco Nonni contro Nipoti"></button><figcaption>Le regole e le carte «Una volta»</figcaption></figure>
       <figure role="listitem"><button type="button" class="js-zoom-btn" aria-label="Ingrandisci: carte Una volta e Oggi"><img src="/img/carte-volta-oggi.webp" loading="lazy" width="909" height="1287" alt="Carte verdi Una volta e carte rosse Oggi"></button><figcaption>Le carte «Una volta» e «Oggi»</figcaption></figure>
     </div>
@@ -399,10 +400,12 @@ dialog.lb button{position:fixed;top:12px;right:12px;width:46px;height:46px;borde
 <section class="final" id="acquista">
   <div class="wrap narrow center">
     <h2>Il 25 dicembre arriva in fretta.</h2>
-    <div class="launch js-launch">
-      <p><strong>Prezzo di lancio: 11,90€</strong> invece di <span class="strike">14,90€</span>.</p>
-      <p>Vale fino all'8 dicembre. Dal 9 dicembre il kit costa 14,90€.</p>
-      <div class="countdown" id="countdown" aria-live="polite">
+    <div class="launch">
+      <div class="js-launch">
+        <p><strong>Prezzo di lancio: <span class="js-price">11,90€</span></strong> invece di <span class="strike">14,90€</span>.</p>
+        <p>Vale fino all'8 dicembre. Dal 9 dicembre il kit costa 14,90€.</p>
+      </div>
+      <div class="countdown js-launch" id="countdown" aria-live="off">
         <div><b data-u="d">--</b><small>giorni</small></div>
         <div><b data-u="h">--</b><small>ore</small></div>
         <div><b data-u="m">--</b><small>minuti</small></div>
@@ -457,31 +460,52 @@ dialog.lb button{position:fixed;top:12px;right:12px;width:46px;height:46px;borde
 </dialog>
 
 <script>
+/* ---------- Prezzo di lancio e conto alla rovescia ---------- */
 (function(){
-  // Fine prezzo di lancio: 8 dicembre 2026, 23:59:59 ora italiana (CET = UTC+1)
-  var DEADLINE = Date.UTC(2026, 11, 8, 22, 59, 59);
-  var FULL = '14,90€';
+  // Fine prezzo di lancio: 8 dicembre 2026, 23:59:59 ora italiana
+  var DEADLINE_ISO = '2026-12-08T23:59:59+01:00';
+  var DEADLINE = new Date(DEADLINE_ISO).getTime();
+  if (isNaN(DEADLINE)) DEADLINE = Date.UTC(2026, 11, 8, 22, 59, 59); // fallback per browser datati
+  var LAUNCH = '11,90€', FULL = '14,90€';
+
+  function each(sel, fn){ Array.prototype.forEach.call(document.querySelectorAll(sel), fn); }
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
 
   function expire(){
-    document.querySelectorAll('.js-launch').forEach(function(el){ el.classList.add('is-hidden'); });
-    document.querySelectorAll('.js-price').forEach(function(el){ el.textContent = FULL; });
+    // Nasconde conto alla rovescia, box e righe del prezzo di lancio
+    each('.js-launch', function(el){ el.classList.add('is-hidden'); });
+    // Sostituisce 11,90€ con 14,90€ in tutta la pagina (bottoni compresi)
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    var node;
+    while ((node = walker.nextNode())) {
+      if (node.nodeValue.indexOf(LAUNCH) !== -1) node.nodeValue = node.nodeValue.split(LAUNCH).join(FULL);
+    }
+    document.documentElement.setAttribute('data-price', 'full');
   }
 
-  var units = {};
-  document.querySelectorAll('#countdown [data-u]').forEach(function(el){ units[el.getAttribute('data-u')] = el; });
-  function pad(n){ return (n < 10 ? '0' : '') + n; }
-  var timer;
-  function tick(){
-    var diff = DEADLINE - Date.now();
-    if (diff <= 0){ expire(); if (timer) clearInterval(timer); return; }
-    var s = Math.floor(diff / 1000);
-    units.d.textContent = Math.floor(s / 86400);
-    units.h.textContent = pad(Math.floor(s % 86400 / 3600));
-    units.m.textContent = pad(Math.floor(s % 3600 / 60));
-    units.s.textContent = pad(s % 60);
+  function start(){
+    var units = {};
+    each('#countdown [data-u]', function(el){ units[el.getAttribute('data-u')] = el; });
+    var timer = null;
+    function tick(){
+      var diff = DEADLINE - Date.now();
+      if (diff <= 0){ if (timer) clearInterval(timer); expire(); return; }
+      var s = Math.floor(diff / 1000);
+      if (units.d) units.d.textContent = Math.floor(s / 86400);
+      if (units.h) units.h.textContent = pad(Math.floor(s % 86400 / 3600));
+      if (units.m) units.m.textContent = pad(Math.floor(s % 3600 / 60));
+      if (units.s) units.s.textContent = pad(s % 60);
+    }
+    tick();
+    if (Date.now() < DEADLINE) timer = setInterval(tick, 1000);
   }
-  tick();
-  if (Date.now() < DEADLINE) timer = setInterval(tick, 1000);
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
+})();
+
+/* ---------- Interazioni della pagina ---------- */
+(function(){
 
   // CTA fissa su mobile dopo l'hero
   var sticky = document.getElementById('sticky');
@@ -500,17 +524,17 @@ dialog.lb button{position:fixed;top:12px;right:12px;width:46px;height:46px;borde
     lbImg.src = src; lbImg.alt = alt || '';
     if (lb.showModal) lb.showModal(); else window.open(src, '_blank');
   }
-  document.querySelectorAll('.js-zoom-btn').forEach(function(b){
+  Array.prototype.forEach.call(document.querySelectorAll('.js-zoom-btn'), function(b){
     b.addEventListener('click', function(){ var i = b.querySelector('img'); open(i.src, i.alt); });
   });
-  document.querySelectorAll('.js-zoom').forEach(function(i){
+  Array.prototype.forEach.call(document.querySelectorAll('.js-zoom'), function(i){
     i.addEventListener('click', function(){ open(i.src, i.alt); });
   });
   document.getElementById('lb-close').addEventListener('click', function(){ lb.close(); });
   lb.addEventListener('click', function(e){ if (e.target === lb) lb.close(); });
 
   // Link legali ancora da completare
-  document.querySelectorAll('[data-todo]').forEach(function(a){
+  Array.prototype.forEach.call(document.querySelectorAll('[data-todo]'), function(a){
     a.addEventListener('click', function(e){ e.preventDefault(); });
   });
 })();
